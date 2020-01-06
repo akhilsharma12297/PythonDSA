@@ -5,21 +5,18 @@ def starter():
 
 
 def fun(val, arr):
-    Flag = func_helper(0, val, arr)
-
-    if Flag:
-        print("Found at", idx)
-    else:
-        print("Not Found !!")
+    func_helper(0, val, arr)
 
 
 def func_helper(idx, val, arr):
     if idx == len(arr):
+        print("Code was here")
         return False
-    
+
     func_helper(idx + 1, val, arr)
 
     if val == arr[idx]:
+        print("Found  at ", idx)
         return True
 
 
